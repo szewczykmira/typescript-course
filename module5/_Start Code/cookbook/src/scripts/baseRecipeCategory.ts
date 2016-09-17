@@ -5,15 +5,29 @@ class BaseRecipeCategory {
     //TODO (PROPERTIES EXERCISE) 
     //1. Create private "_name" (string type) and "_foodGroups" (FoodGroup[] type) member variables/fields.
     //2. Assign the "_foodGroups" field a value of [];
-    
+    private _name: string;
+    private _foodGroups : FoodGroup[] = []; 
     
     
     //TODO (PROPERTIES EXERCISE)
     //1.  Create get and set blocks for "name" (string type) and "foodGroups" (FoodGroup[] type) properties.
     //2. The get block should return _name while the set block should assign the value to _name.
+    get name(): string {
+      return this._name;
+    } 
     
+    set name(value:string){
+      this._name = value;
+    }
+
+    get foodGroups(): FoodGroup[] {
+      return this._foodGroups;
+    }
     
-    
+    set FoodGroup(food: FoodGroup[]){
+      this._foodGroups = food;
+    }
+
     /*
       TODO (CONSTRUCTORS EXERCISE) Perform the following steps:
       1. Delete the existing variables/fields and property get/set blocks currently in the class.
